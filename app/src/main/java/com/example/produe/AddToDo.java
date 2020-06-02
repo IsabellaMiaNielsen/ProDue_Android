@@ -125,6 +125,9 @@ public class AddToDo extends AppCompatActivity {
     private void setupSpinner() {
         List<String> categoryList = new ArrayList<String>();
 
+        // Add "None to the category list
+        categoryList.add("None");
+        
         toDoViewModel.getCategories().observe(this, new Observer<List<TimerEntity>>() {
             @Override
             public void onChanged(List<TimerEntity> categories) {
